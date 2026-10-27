@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.ExceptionServices;
 
 namespace MidtermExam.Prob01
 {
@@ -22,8 +24,14 @@ namespace MidtermExam.Prob01
         /// </remarks>
         public int AS01_CountVowels(Queue<string> alphabets)
         {
-            // TODO: เขียนคำตอบแทนคำสั่ง throw exception ด้านล่าง
-            throw new NotImplementedException();
+            // TODO: เขียนคำตอบแทนคำสั่ง throw 
+            alphabets = new Queue<string>();
+            for (int i = 0; i < alphabets.Count; i++)
+            {
+                string alphabet = alphabets.Dequeue();
+                alphabet = alphabet.ToLower();
+            }
+            return alphabets.Count;
         }
     }
 }
